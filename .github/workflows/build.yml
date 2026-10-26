@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cia-build
-          path: ./*.cia
+          path: ./*.bnr
           if-no-files-found: error
           retention-days: 30
 
@@ -60,4 +60,4 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: ./*.cia
+          files: ./*.bnr
