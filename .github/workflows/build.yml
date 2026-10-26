@@ -46,7 +46,7 @@ jobs:
           ./bannertool makebanner -i "$BANNER" -a "$AUDIO" -o banner.bnr
           ./cxitool -b banner.bnr -t "$TID" -c "$CODE" "$INPUT" temp.cxi
           ./makerom -f cia -o "$OUTPUT" -target t -rsf game.rsf -i temp.cxi:0:0 -ignoresign
-          rm -f temp.cxi banner.bnr
+          
 
       - name: Upload CIA artifacts
         uses: actions/upload-artifact@v4
